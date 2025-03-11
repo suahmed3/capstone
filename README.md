@@ -103,6 +103,7 @@ The business needs to know about LNG trade activites, with a focus on outflows f
 
 Used the Code Institute LMS for guidance on plotting the pie charts and line graphs: https://learn.codeinstitute.net/ci_program/daai_3
 For guidance on creating a Sankey diagram: https://plotly.com/python/sankey-diagram/
+Asked ChatGPT for help with the code: https://chatgpt.com/share/67d04a05-db50-8005-8c7a-b5a6f35bdc8b
 
 
 ### Content 
