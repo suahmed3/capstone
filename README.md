@@ -6,15 +6,27 @@
 
 
 ## Dataset Content
-* Describe your dataset. Choose a dataset of reasonable size to avoid exceeding the repository's maximum size of 100Gb.
+* I will be using two datasets in this project, one for the initial analysis, and the other for a second order analysis to supplement the findings from the first dataset and test further hypoetheses to inform the business strategy.
+
+The primary dataset is from the International Energy Agency (IEA) and shows monthly gas flow data from 31 participating countries, primarily covering Europe, as of February 2025. 
+
+The secondary dataset is from the US Energy Information Administration (EIA), showing the montly prices of US LNG exports from 1997 to 2024. 
 
 
 ## Business Requirements
-* Describe your business requirements
+* The business is a new US-based investment fund that has been given a mandate to trade in energy and commodities. Due to the disruption in supply chains and changing nature of where fuels are sourced as a result of geopolitical events, the fund is interested in exploring liquified natural gas (LNG). 
+
+It is particularly focused on trade flows between the US and Europe, and where opportunities may lie for US LNG exports. The traders at the fund need data analysis done in this field to examine the best opportunities for investment and viable strategies based on markets, time of year, and likelihood of future return.
 
 
 ## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them) 
+* My hypotheses are as follows:
+* * European countries have a higher demand for LNG during winter months
+* * The largest LNG producers export less during winter
+* * Prices for US LNG rise in line with demand
+* * The best time to invest is during late summer/early autumn as prices are still low but demand is set to rise rapidly
+
+I will validate these hypotheses by analysing the data, creating visualisations, and checking if correlations exist, where relevant.
 
 ## Project Plan
 * Outline the high-level steps taken for the analysis.
