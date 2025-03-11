@@ -8,7 +8,7 @@
 ## Dataset Content
 * I will be using two datasets in this project, one for the initial analysis, and the other for a second order analysis to supplement the findings from the first dataset and test further hypoetheses to inform the business strategy.
 
-The primary dataset is from the International Energy Agency (IEA) and shows monthly gas flow data from 31 participating countries, primarily covering Europe, as of February 2025. 
+The primary dataset is from the International Energy Agency (IEA) and shows monthly gas flow per million cubic metres from 31 participating countries, primarily covering Europe, as of February 2025. 
 
 The secondary dataset is from the US Energy Information Administration (EIA), showing the montly prices of US LNG exports from 1997 to 2024. 
 
@@ -20,21 +20,37 @@ It is particularly focused on trade flows between the US and Europe, and where o
 
 
 ## Hypothesis and how to validate?
-* My hypotheses are as follows:
-* * European countries have a higher demand for LNG during winter months
-* * The largest LNG producers export less during winter
-* * Prices for US LNG rise in line with demand
-* * The best time to invest is during late summer/early autumn as prices are still low but demand is set to rise rapidly
+My hypotheses are as follows:
+* European countries have a higher demand for LNG during winter months
+* The largest LNG producers export less during winter
+* Prices for US LNG rise in line with demand
+* The best time to invest is during late summer/early autumn as prices are still low but demand is set to rise rapidly
 
 I will validate these hypotheses by analysing the data, creating visualisations, and checking if correlations exist, where relevant.
 
 ## Project Plan
 * Outline the high-level steps taken for the analysis.
+
+These are the steps to be taken for this analysis:
+* Import both datasets
+* Check attributes of LNG trade flow dataset
+* Clean the LNG trade flow dataset
+* Basic visualisation for the dataset
+* Advanced visualisation for the dataset
+* Run statistical tests
+* Check attributes of US LNG export prices dataset
+* Clean it
+* Basic visualisations
+* Statistical tests to see link between US LNG prices and exports
+* Advances visualisations on Tableau
+* Create and deploy dashboard on Streamlit
+
 * How was the data managed throughout the collection, processing, analysis and interpretation steps?
 * Why did you choose the research methodologies you used?
 
 ## The rationale to map the business requirements to the Data Visualisations
 * List your business requirements and a rationale to map them to the Data Visualisations
+The business needs to know about LNG trade activites, with a focus on outflows from the United States and in flows to European countries, so visualisations need to show the prime months for European gas demand, the typical times of year that US LNG flows start to rise, and, latterly, the prices of US LNG at different points of the year historically. 
 
 ## Analysis techniques used
 * List the data analysis methods used and explain limitations or alternative approaches.
