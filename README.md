@@ -6,7 +6,7 @@
 
 
 ## Dataset Content
-* I will be using two datasets in this project, one for the initial analysis, and the other for a second order analysis to supplement the findings from the first dataset and test further hypoetheses to inform the business strategy.
+* I will be using two datasets in this project, one for the initial analysis, and the other for some secondary analysis to supplement the findings from the first dataset and test further hypoetheses to inform the business strategy.
 
 The primary dataset is from the International Energy Agency (IEA) and shows monthly gas flow per million cubic metres from 31 participating countries, primarily covering Europe, as of February 2025. 
 
@@ -21,8 +21,8 @@ It is particularly focused on trade flows between the US and Europe, and where o
 
 ## Hypothesis and how to validate?
 My hypotheses are as follows:
-* European countries have a higher demand for LNG during winter months
-* The largest LNG producers export less during winter
+* European Union countries have a higher demand for LNG during winter months
+* LNG producers export less during their winter
 * Prices for US LNG rise in line with demand
 * The best time to invest is during late summer/early autumn as prices are still low but demand is set to rise rapidly
 
@@ -100,6 +100,10 @@ The business needs to know about LNG trade activites, with a focus on outflows f
 
 * In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
 * You can break the credits section up into Content and Media, depending on what you have included in your project. 
+
+Used the Code Institute LMS for guidance on plotting the pie charts and line graphs: https://learn.codeinstitute.net/ci_program/daai_3
+For guidance on creating a Sankey diagram: https://plotly.com/python/sankey-diagram/
+
 
 ### Content 
 
