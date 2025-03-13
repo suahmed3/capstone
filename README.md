@@ -101,6 +101,8 @@ The business needs to know about LNG trade activites, with a focus on outflows f
 * In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
 * You can break the credits section up into Content and Media, depending on what you have included in your project. 
 
+Sourced dataset from here: https://www.iea.org/data-and-statistics/data-product/gas-trade-flows
+Sourced second dataset from here: https://www.eia.gov/dnav/ng/hist/n9133us3m.htm
 Used the Code Institute LMS for guidance on plotting the pie charts and line graphs: https://learn.codeinstitute.net/ci_program/daai_3
 For guidance on creating a Sankey diagram: https://plotly.com/python/sankey-diagram/
 Asked ChatGPT for help with the code: https://chatgpt.com/share/67d04a05-db50-8005-8c7a-b5a6f35bdc8b
