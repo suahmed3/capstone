@@ -1,0 +1,90 @@
+Query: Fix this code:
+
+df2_2024 = df2[df['Month'].str.contains('2024')]
+df2_2024.plot(kind='line', x=uk_imports_2024.index, y=uk_imports_2024.values, title='US LNG Export Prices ($ per thousand cubic feet')
+
+It should be per Month value that has 2024 in the name, for other column 'Price of Liquefied U.S. Natural Gas Exports  Dollars per Thousand Cubic Feet'
+
+ChatGPT said:
+Your code has a few issues that need fixing:
+
+Issues in Your Code
+Wrong DataFrame Reference (df instead of df2)
+
+You're filtering df2, but mistakenly using df inside the str.contains() method.
+Bracket Mismatch in title
+
+The title argument has a missing closing parenthesis ).
+Incorrect x and y Arguments in plot()
+
+uk_imports_2024.index and uk_imports_2024.values are not defined.
+Instead, you should specify the actual column names.
+Fixed Code
+python
+Copy
+Edit
+# Filter data for rows where 'Month' contains '2024'
+df2_2024 = df2[df2['Month'].str.contains('2024', na=False)]
+
+# Plot line chart
+df2_2024.plot(
+    kind='line',
+    x='Month',  # Month column for the x-axis
+    y='Price of Liquefied U.S. Natural Gas Exports  Dollars per Thousand Cubic Feet',  # Correct column name
+    title='US LNG Export Prices ($ per thousand cubic feet)'
+)
+Key Fixes & Improvements
+✅ Corrected DataFrame Reference → Changed df to df2 in the filtering line.
+✅ Handled NaN Values in str.contains() → Added na=False to avoid errors.
+✅ Fixed plot() Parameters → Used column names directly instead of uk_imports_2024.index.
+✅ Fixed Syntax Error in title → Closed the missing parenthesis.
+
+Try this and let me know if you get any errors! 🚀
+
+You said:
+Make the code put the months in correct order
+ChatGPT said:
+By default, pandas treats the 'Month' column as a string, which can cause sorting issues when plotting. You need to convert it to a datetime format and sort it properly.
+
+Fixed Code with Correct Month Ordering
+python
+Copy
+Edit
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Convert 'Month' to datetime format
+df2['Month'] = pd.to_datetime(df2['Month'], errors='coerce')
+
+# Filter data for 2024
+df2_2024 = df2[df2['Month'].dt.year == 2024].sort_values(by='Month')
+
+# Plot line chart
+df2_2024.plot(
+    kind='line',
+    x='Month',  # X-axis: Properly sorted dates
+    y='Price of Liquefied U.S. Natural Gas Exports  Dollars per Thousand Cubic Feet',
+    title='US LNG Export Prices ($ per thousand cubic feet)',
+    legend=False
+)
+
+plt.xlabel('Month')
+plt.ylabel('Price ($ per thousand cubic feet)')
+plt.xticks(rotation=45)  # Rotate x-axis labels for better readability
+plt.grid(True)
+plt.show()
+Key Fixes & Improvements
+✅ Converted 'Month' to datetime format → Ensures correct chronological sorting.
+✅ Used .sort_values(by='Month') → Orders the months properly before plotting.
+✅ Improved Plot Formatting
+
+Rotated x-axis labels for better readability.
+Added grid lines to make the chart easier to read.
+Removed extra legend (since it's a single line).
+This will now correctly sort and display the months in order. Let me know if you need further tweaks! 🚀
+
+
+
+
+
+
