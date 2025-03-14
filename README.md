@@ -41,7 +41,6 @@ These are the steps to be taken for this analysis:
 * Check attributes of US LNG export prices dataset
 * Clean it
 * Basic visualisations
-* Statistical tests to see link between US LNG prices and exports
 * Advances visualisations on Tableau
 * Create and deploy dashboard on Streamlit
 
@@ -93,7 +92,10 @@ The business needs to know about LNG trade activites, with a focus on outflows f
 
 
 ## Main Data Analysis Libraries
-* Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
+* Pandas
+* Numpy
+* Matplotlib
+* Plotly
 
 
 ## Credits 
@@ -106,6 +108,7 @@ Sourced second dataset from here: https://www.eia.gov/dnav/ng/hist/n9133us3m.htm
 Used the Code Institute LMS for guidance on plotting the pie charts and line graphs: https://learn.codeinstitute.net/ci_program/daai_3
 For guidance on creating a Sankey diagram: https://plotly.com/python/sankey-diagram/
 Asked ChatGPT for help with the code: https://chatgpt.com/share/67d04a05-db50-8005-8c7a-b5a6f35bdc8b
+For help to be able to visually compare US LNG export prices in 2023 and 2024: https://community.tableau.com/s/question/0D54T00000C5hf4SAB/multiple-series-on-line-graph
 
 
 ### Content 
