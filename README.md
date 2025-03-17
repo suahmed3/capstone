@@ -51,18 +51,17 @@ These are the steps to be taken for this analysis:
 
 Here are links to my visualisations:
 
-[Total Gas Exported from EU 2024.png](https://github.com/suahmed3/capstone/blob/b1d0ab09b87139f6b3acbddee54939e8c29c29e9/Total%20Gas%20Exported%20from%20EU%202024.png)
+Total Gas Imports by Country 2024 - https://github.com/suahmed3/capstone/blob/1d302185402b3dcb1b7c69d0b408fea67561babd/Total%20Gas%20Imports%20by%20Country%202024.png
 
-https://github.com/suahmed3/capstone/blob/b1d0ab09b87139f6b3acbddee54939e8c29c29e9/Total%20LNG%20imported%20to%20EU%202024%20line%20graph.png
+Total Gas Exported from EU 2024 - https://github.com/suahmed3/capstone/blob/b1d0ab09b87139f6b3acbddee54939e8c29c29e9/Total%20Gas%20Exported%20from%20EU%202024.png
 
-https://github.com/suahmed3/capstone/blob/b1d0ab09b87139f6b3acbddee54939e8c29c29e9/UK%20LNG%20imports%202024.png
+Total LNG Imported by EU 2024 - https://github.com/suahmed3/capstone/blob/b1d0ab09b87139f6b3acbddee54939e8c29c29e9/Total%20LNG%20imported%20to%20EU%202024%20line%20graph.png
 
-https://github.com/suahmed3/capstone/blob/b1d0ab09b87139f6b3acbddee54939e8c29c29e9/US%20LNG%20export%20prices%202023.png
+UK LNG Imports 2024 - https://github.com/suahmed3/capstone/blob/b1d0ab09b87139f6b3acbddee54939e8c29c29e9/UK%20LNG%20imports%202024.png
 
-https://github.com/suahmed3/capstone/blob/b1d0ab09b87139f6b3acbddee54939e8c29c29e9/US%20LNG%20export%20prices%202024.png
+US LNG Export Prices 2023 - https://github.com/suahmed3/capstone/blob/b1d0ab09b87139f6b3acbddee54939e8c29c29e9/US%20LNG%20export%20prices%202023.png
 
-
-
+US LNG Export Prices 2024 - https://github.com/suahmed3/capstone/blob/b1d0ab09b87139f6b3acbddee54939e8c29c29e9/US%20LNG%20export%20prices%202024.png
 
 
 ## The rationale to map the business requirements to the Data Visualisations
