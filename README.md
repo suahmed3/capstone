@@ -6,7 +6,8 @@
 
 
 ## Dataset Content
-* I will be using two datasets in this project, one for the initial analysis, and the other for some secondary analysis to supplement the findings from the first dataset and test further hypoetheses to inform the business strategy.
+
+I will be using two datasets in this project, one for the initial analysis, and the other for some secondary analysis to supplement the findings from the first dataset and test further hypoetheses to inform the business strategy.
 
 The primary dataset is from the International Energy Agency (IEA) and shows monthly gas flow per million cubic metres from 31 participating countries, primarily covering Europe, as of February 2025. 
 
@@ -14,13 +15,16 @@ The secondary dataset is from the US Energy Information Administration (EIA), sh
 
 
 ## Business Requirements
-* The business is a new US-based investment fund that has been given a mandate to trade in energy and commodities. Due to the disruption in supply chains and changing nature of where fuels are sourced as a result of geopolitical events, the fund is interested in exploring liquified natural gas (LNG). 
+
+The business is a new US-based investment fund that has been given a mandate to trade in energy and commodities. Due to the disruption in supply chains and changing nature of where fuels are sourced as a result of geopolitical events, the fund is interested in exploring liquified natural gas (LNG). 
 
 It is particularly focused on trade flows between the US and Europe, and where opportunities may lie for US LNG exports. The traders at the fund need data analysis done in this field to examine the best opportunities for investment and viable strategies based on markets, time of year, and likelihood of future return.
 
 
 ## Hypothesis and how to validate?
+
 My hypotheses are as follows:
+
 * European Union countries have a higher demand for LNG during winter months
 * LNG producers export less during their winter
 * Prices for US LNG rise in line with demand
@@ -29,7 +33,6 @@ My hypotheses are as follows:
 I will validate these hypotheses by analysing the data, creating visualisations, and checking if correlations exist, where relevant.
 
 ## Project Plan
-* Outline the high-level steps taken for the analysis.
 
 These are the steps to be taken for this analysis:
 * Import both datasets
@@ -41,11 +44,21 @@ These are the steps to be taken for this analysis:
 * Check attributes of US LNG export prices dataset
 * Clean it
 * Basic visualisations
-* Advances visualisations on Tableau
-* Create and deploy dashboard on Streamlit
+* Advanced visualisations on Tableau
+* Tableau dashboard
 
-* How was the data managed throughout the collection, processing, analysis and interpretation steps?
-* Why did you choose the research methodologies you used?
+The two datasets I used were from the IEA and the EIA. The IEA dataset for LNG import and export patterns was collected on a monthly basis, going back to October 2008. The EIA dataset of US LNG export prices was collected on a monthly basis also, since January 1997 with some exceptions (the second half of 1997, and all of 1998, 1999, and the year 2000).
+
+I sourced the datasets from these websites and imported them into VS Code to read, clean, analyse, and process them. I focused on 2023 and 2024 values when it came to visualisation to provide a manageable reference point for the business and to show the most recent data available. It was important to cover more than one year, to show annual trends, and compare whether monthly fluctuations roughly hold stable in different periods.
+
+For processing, I go into futher detail later on in this document, but it focused around checking null values, renaming variables for ease of analysis, and excluding variables that were not relevant to the business case for Tableau and the dashboard, while still keeping it elsewhere if needed for deeper future analysis.
+
+I created line graphs to visualise gas imports and exports in the EU in 2024, LNG imports into the UK in 2024, and a pie chart showing share of total gas exports by country in the countries in the European gas network. 
+
+I also created line graphs to show US LNG export prices in 2023 and 2024, in Tableau. I made a heatmap to show LNG export destinations and volumes in 2024, and a geographical map to show LNG imports into the EU in 2023.
+
+I used these research methodologies to compare trends in the LNG trade across the European gas network and of prices for US LNG exports. These metholodologies helped me to address the hypotheses in line with the business case.
+
 
 * Visusalisations
 
@@ -63,6 +76,8 @@ US LNG Export Prices 2023 - https://github.com/suahmed3/capstone/blob/b1d0ab09b8
 
 US LNG Export Prices 2024 - https://github.com/suahmed3/capstone/blob/b1d0ab09b87139f6b3acbddee54939e8c29c29e9/US%20LNG%20export%20prices%202024.png
 
+The others can be seen on the Tableau dashboard.
+
 
 ## The rationale to map the business requirements to the Data Visualisations
 
@@ -70,7 +85,7 @@ The business needs to know about LNG trade activites, with a focus on inflows to
 
 ## Analysis techniques used
 
-I used trend analysis for the prices of US LNG exports, displaying the results for both 2023 and 2024 in a dashboard. I also used trend analysis to compare LNG imports into EU countries in 2023 and both import and export destinations and levels between 31 mostly European countries in the European gas network in 2024, with a focus on Germany.
+I used trend analysis for the prices of US LNG exports, displaying the results for both 2023 and 2024 in a dashboard. I also used trend analysis and comparative analysis for LNG imports into EU countries in 2023 and both import and export destinations and levels between 31 mostly European countries in the European gas network in 2024, with a focus on Germany.
 
 The limitations were that I didn't use predictive analysis or trend forecasting. This is an alternative approach I could've taken, I could have actually used 2023's data to test predictive models to see if they accurately predicted 2024's trends in German export flows, LNG import demand in the EU, and US LNG export prices.
 
@@ -109,6 +124,7 @@ This need to communicate xomplex data insights to different audiences is also wh
 Through my analysis, I found these results for the following hypotheses:
 
 * European Union countries have a higher demand for LNG during winter months
+
 This was validated as correct for both 2023 and 2024.
 
 * LNG producers export less during their winter 
@@ -147,9 +163,6 @@ I plan to learn predictive analysis for the next project, as well as learning to
 
 
 ## Credits 
-
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
 
 Sourced dataset from here: https://www.iea.org/data-and-statistics/data-product/gas-trade-flows
 
