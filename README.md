@@ -49,7 +49,7 @@ These are the steps to be taken for this analysis:
 
 ## The rationale to map the business requirements to the Data Visualisations
 * List your business requirements and a rationale to map them to the Data Visualisations
-The business needs to know about LNG trade activites, with a focus on outflows from the United States and in flows to European countries, so visualisations need to show the prime months for European gas demand, the typical times of year that US LNG flows start to rise, and, latterly, the prices of US LNG at different points of the year historically. 
+The business needs to know about LNG trade activites, with a focus on inflows to European countries and US LNG export prices, so visualisations need to show the prime months for European gas demand, the trends in terms of where these countries export to and import from, and the prices of US LNG at different points of the year historically. 
 
 ## Analysis techniques used
 * List the data analysis methods used and explain limitations or alternative approaches.
@@ -59,18 +59,36 @@ The business needs to know about LNG trade activites, with a focus on outflows f
 
 ## Ethical considerations
 * Were there any data privacy, bias or fairness issues with the data?
+
+There were no data privacy, bias, or fainess issues with the data, as it does not concern individuals, and is instead about LNG trading patterns and prices.
+
 * How did you overcome any legal or societal issues?
+
+There were no legal or societal issues to overcome as these data were publicly available and do not identify specific individuals or corporations.
 
 ## Dashboard Design
 * List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
-* Later, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but subsequently you used another plot type).
-* How were data insights communicated to technical and non-technical audiences?
-* Explain how the dashboard was designed to communicate complex data insights to different audiences. 
+
+Dashboard on Tableau:
+https://public.tableau.com/app/profile/saad.ahmed1183/viz/LNGTradeFlows/Dashboard1_1
+
+This dashboard shows the trade flows of LNG in 2024 for 31 countries, primarily Europe, all covered under the IEA. It is currently set to show all the export destinations of gas exported from Germany, with the size of each box element showing the number of times LNG has flowed to each destination, and the colour denoting the absolute volume in million cubic metres, the darker the higher this is.
+
+Additionally, there are two line graphs showing the prices of US LNG exports $ per million cubic feet, the first showing the values in 2023 and the second in 2024. Finally, there is a map showing the LNG imports for European Union countries in 2024, with the darkness of the shade showing higher imports in million cubic metres.
+
+Dashboard on Google Python Flask Web App displays this same dashboard with the same capabilities, it can be found here: https://tableau-app-xyz.a.run.app/
+
+The data insights are communicated to both technical and non-technical audiences through clearly displaying trends in a way that doesn't overwhelm people by including unnecessary information. For example, I didn't think it pertinent to include MAXFLOW or Borderpoint, and while I did include Flow Volume and Count of LNG Flow, these were not written on the dashboard elements so as not to confuse non-technical audiences. Instead, hovering on each element will give you additional information that is more precise, without the display compromising the meaning.
+
+This need to communicate xomplex data insights to different audiences is also why I included line graphs with the prices of US LNG exports clearly displayed for each month in 2023 and 2024. I created two line graphs, 2023 on top and 2024 below, to simplify the display, with the bottom graph showing the months clearly, and having different Y axes to show more clearly that US LNG export prices had a different range of absolute values between the years, but that the broader trends in price fluctuation were roughly similar.
+
 
 ## Unfixed Bugs
-* Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
-* Did you recognise gaps in your knowledge, and how did you address them?
-* If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.
+
+One unfixed bug was my inability to create a Sankey diagram to be able to show LNG export Exit and Entry points, showing flow to different countries. I found a different and ultimately better alternative, through both the heatmap for 2024, which is customisable, and the map graph.
+
+I recognised a few gaps in my knowledge, and consulted the internet, Chat GPT, and my own notes to be able to complete what was needed. It improved my understanding because I was able to reiterate some things that I had picked up but forgotten, and had a practical use case for them through this project, which will aid my memory.
+
 
 ## Development Roadmap
 * What challenges did you face, and what strategies were used to overcome these challenges?
