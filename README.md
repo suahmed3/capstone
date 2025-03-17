@@ -152,7 +152,7 @@ I faced some challenges with Tableau initially but it was because the data wasn'
 
 Another was my inability to figure out how to plot both 2023 and 2024's US LNG export prices line graphs on the same chart, though this was mitigated by placing them one above and one below, and keeping the months visible on the chart below, for easier comparison.
 
-I plan to learn predictive analysis for the next project, as well as learning to better pre-preparing data for use in Tableau as part of the initial ETL process.
+I plan to learn predictive analysis for the next project, as well as learning to better pre-preparing data for use in Tableau as part of the initial ETL process. I will also ensure that initial visualisations have graph axes that start from zero.
 
 
 ## Main Data Analysis Libraries
