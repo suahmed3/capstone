@@ -18,7 +18,7 @@ The secondary dataset is from the US Energy Information Administration (EIA), sh
 
 The business is a new US-based investment fund that has been given a mandate to trade in energy and commodities. Due to the disruption in supply chains and changing nature of where fuels are sourced as a result of geopolitical events, the fund is interested in exploring liquified natural gas (LNG). 
 
-It is particularly focused on trade flows between the US and Europe, and where opportunities may lie for US LNG exports. The traders at the fund need data analysis done in this field to examine the best opportunities for investment and viable strategies based on markets, time of year, and likelihood of future return.
+It is particularly focused on trade flows to and within Europe. The traders at the fund need data analysis done in this field to examine the best opportunities for investment and viable strategies based on markets, time of year, and likelihood of future return.
 
 
 ## Hypothesis and how to validate?
