@@ -47,27 +47,39 @@ These are the steps to be taken for this analysis:
 * How was the data managed throughout the collection, processing, analysis and interpretation steps?
 * Why did you choose the research methodologies you used?
 
+* Visusalisations
+
+
+
+
 ## The rationale to map the business requirements to the Data Visualisations
-* List your business requirements and a rationale to map them to the Data Visualisations
+
 The business needs to know about LNG trade activites, with a focus on inflows to European countries and US LNG export prices, so visualisations need to show the prime months for European gas demand, the trends in terms of where these countries export to and import from, and the prices of US LNG at different points of the year historically. 
 
 ## Analysis techniques used
-* List the data analysis methods used and explain limitations or alternative approaches.
-* How did you structure the data analysis techniques. Justify your response.
-* Did the data limit you, and did you use an alternative approach to meet these challenges?
-* How did you use generative AI tools to help with ideation, design thinking and code optimisation?
+
+I used trend analysis for the prices of US LNG exports, displaying the results for both 2023 and 2024 in a dashboard. I also used trend analysis to compare LNG imports into EU countries in 2023 and both import and export destinations and levels between 31 mostly European countries in the European gas network in 2024, with a focus on Germany.
+
+The limitations were that I didn't use predictive analysis or trend forecasting. This is an alternative approach I could've taken, I could have actually used 2023's data to test predictive models to see if they accurately predicted 2024's trends in German export flows, LNG import demand in the EU, and US LNG export prices.
+
+In terms of structuring my data, there were a number of steps I needed to take. In the ETL stage, I checked the first dataset, the IEA LNG exports, got its description, info, and whether it contained null values.
+
+I then had to reshape the data to be able to use it in Tableau, which involved melting columns with names such as Jun-24 and Jan-23 into a date-time format, creating the value 'Month'. I then kept only the variables relevant to the analysis, which were Month, Exit, Entry, and the also newly named Flow Volume which was previously bundled under each month. I included Borderpoint too, but decided to exclude this from analysis in Tableau as I considered it redundant and could be needlessly confusing for non-experts if included within a dashboard.
+
+The data limited me somewhat, as there were some unnamed export destinations, simply marketed as Liquefied Natural Gas, which weren't caught in the initial ETL, so I had to exclude them within Tableau. Luckily, there were very few of these, so it didn't tamper with the overall conclusions or implications of the dataset, the trends held firm.
+
+I also did not have figures for US LNG imports through the data I used, as the United States is not one of the participating countries in this dataset, which was primarily focused on the European natural gas network. The only dataset from the same source which showed gas flows between all OECD countries did not break down these statistics by month, instead only showing the annual amounts, which is not sufficient for a more focused analysis and the business case.
+
+I used generative AI - namely ChatGPT - to help me fix code pertaining to reshaping the dataset for use in Tableau, and for tips on creating a Sankey diagram. 
 
 ## Ethical considerations
-* Were there any data privacy, bias or fairness issues with the data?
 
-There were no data privacy, bias, or fainess issues with the data, as it does not concern individuals, and is instead about LNG trading patterns and prices.
+There were no data privacy, bias, or fairness issues with the data, as it does not concern individuals, and is instead about LNG trading patterns and prices. It could be argued that there were some biases in that despite some of the countries in the European gas network also importing LNG from countries outside of the same network, this was not recorded in the dataset. 
 
-* How did you overcome any legal or societal issues?
 
 There were no legal or societal issues to overcome as these data were publicly available and do not identify specific individuals or corporations.
 
 ## Dashboard Design
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
 
 Dashboard on Tableau:
 https://public.tableau.com/app/profile/saad.ahmed1183/viz/LNGTradeFlows/Dashboard1_1
@@ -76,12 +88,28 @@ This dashboard shows the trade flows of LNG in 2024 for 31 countries, primarily 
 
 Additionally, there are two line graphs showing the prices of US LNG exports $ per million cubic feet, the first showing the values in 2023 and the second in 2024. Finally, there is a map showing the LNG imports for European Union countries in 2024, with the darkness of the shade showing higher imports in million cubic metres.
 
-Dashboard on Google Python Flask Web App displays this same dashboard with the same capabilities, it can be found here: https://tableau-app-xyz.a.run.app/
-
 The data insights are communicated to both technical and non-technical audiences through clearly displaying trends in a way that doesn't overwhelm people by including unnecessary information. For example, I didn't think it pertinent to include MAXFLOW or Borderpoint, and while I did include Flow Volume and Count of LNG Flow, these were not written on the dashboard elements so as not to confuse non-technical audiences. Instead, hovering on each element will give you additional information that is more precise, without the display compromising the meaning.
 
 This need to communicate xomplex data insights to different audiences is also why I included line graphs with the prices of US LNG exports clearly displayed for each month in 2023 and 2024. I created two line graphs, 2023 on top and 2024 below, to simplify the display, with the bottom graph showing the months clearly, and having different Y axes to show more clearly that US LNG export prices had a different range of absolute values between the years, but that the broader trends in price fluctuation were roughly similar.
 
+## Conclusions
+
+Through my analysis, I found these results for the following hypotheses:
+
+* European Union countries have a higher demand for LNG during winter months
+This was validated as correct for both 2023 and 2024.
+
+* LNG producers export less during their winter 
+
+This was validated - while the European countries focused on had higher exports in December, the absolute volume exported was much lower than the winter months.
+
+* Prices for US LNG rise in line with demand
+
+This cannot be accurately discerned from the existing data, it would require an additional dataset. However, what we can see is that US LNG export prices were at their highest in January in both 2023 and 2024, and experienced rises towards the end of year, in Autumn and Winter. 
+
+* The best time to invest is during summer as prices are still low but demand is set to rise rapidly
+
+This would require additional analysis to prove, but in the patterns of prices, we can see that they hold relatively steady for most of the year, and noticeable dips tend to begin in June or July, before starting to rise again from September. In both 2023 and 2024, prices have been at their lowest in August, which suggests this hypothesis may be correct.
 
 ## Unfixed Bugs
 
@@ -91,22 +119,12 @@ I recognised a few gaps in my knowledge, and consulted the internet, Chat GPT, a
 
 
 ## Development Roadmap
-* What challenges did you face, and what strategies were used to overcome these challenges?
-* What new skills or tools do you plan to learn next based on your project experience? 
 
-## Deployment
-### Heroku
+I faced some challenges with Tableau initially but it was because the data wasn't properly formatted for easy usability within Tableau. The stratgies I used were research, finding resources on Google and also asking Chat GPT.
 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
-* Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-* The project was deployed to Heroku using the following steps.
+Another was my inability to figure out how to plot both 2023 and 2024's US LNG export prices line graphs on the same chart, though this was mitigated by placing them one above and one below, and keeping the months visible on the chart below, for easier comparison.
 
-1. Log in to Heroku and create an App
-2. From the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
+I plan to learn predictive analysis for the next project, as well as learning to better pre-preparing data for use in Tableau as part of the initial ETL process.
 
 
 ## Main Data Analysis Libraries
@@ -122,25 +140,14 @@ I recognised a few gaps in my knowledge, and consulted the internet, Chat GPT, a
 * You can break the credits section up into Content and Media, depending on what you have included in your project. 
 
 Sourced dataset from here: https://www.iea.org/data-and-statistics/data-product/gas-trade-flows
+
 Sourced second dataset from here: https://www.eia.gov/dnav/ng/hist/n9133us3m.htm
+
 Used the Code Institute LMS for guidance on plotting the pie charts and line graphs: https://learn.codeinstitute.net/ci_program/daai_3
+
 For guidance on creating a Sankey diagram: https://plotly.com/python/sankey-diagram/
+
 Asked ChatGPT for help with the code: https://chatgpt.com/share/67d04a05-db50-8005-8c7a-b5a6f35bdc8b
+
 For help to be able to visually compare US LNG export prices in 2023 and 2024: https://community.tableau.com/s/question/0D54T00000C5hf4SAB/multiple-series-on-line-graph
 
-
-### Content 
-
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
-### Media
-
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
-
-
-
-## Acknowledgements (optional)
-* Thank the people who provided support through this project.
